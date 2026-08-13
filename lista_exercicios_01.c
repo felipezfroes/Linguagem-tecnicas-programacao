@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int exercicio_01 ()
+void exercicio_01 ()
 {
 	// === exercicio 01 ===
 	int primeiro, segundo, aux;
@@ -21,7 +21,7 @@ int exercicio_01 ()
 	printf("%d \n %d", primeiro, segundo);
 }
 
-int exercicio_02() {
+void exercicio_02() {
 	//NOTACAO CIENTIFICA
     double valor;
     int expoente = 0;
@@ -49,11 +49,9 @@ int exercicio_02() {
     }
     
     printf("%.1f x 10^%d\n", valor, expoente);
-    
-    return 0;
 }
 
-int exercicio_03()
+void exercicio_03()
 {
 	//CONVERSOR DE NUMERO DECIMAL PARA BINARIO
 	int n, numero_bits, n_binario;
@@ -67,13 +65,12 @@ int exercicio_03()
 	if (n == 0)
 	{
 		printf("0");
-		return;
 	}
 	
 	
 }
 
-int exercicio_04()
+void exercicio_04()
 {
 	//SALARIO FINAL MENSAL
 	float salario_fixo, total_vendas, salario_final;
@@ -88,7 +85,7 @@ int exercicio_04()
 	printf("O total a receber por mes sera :%.2f", salario_final);
 }
 
-int exercicio_05() {
+void exercicio_05() {
     //soma, media e produto
     
     int n1, n2, n3, n4, soma, media, produto;
@@ -116,10 +113,9 @@ int exercicio_05() {
     printf("A soma desses valores: %d\n", soma);
     printf("A media desses valores: %d\n", media);
     printf("O produto desses valores: %d\n", produto);
-    return 0;
 }
 
-int exercicio_06() {
+void exercicio_06() {
     //RECEBER UM NUMERO DE DIAS EM RELACAO A IDADE E VOLTAR 
     int total_dias, anos, meses, dias, resto;
     
@@ -133,11 +129,9 @@ int exercicio_06() {
     dias = resto % 30;
     
     printf("Voce tem %d anos, %d meses e %d dias de vida", anos, meses, dias);
-    
-    return 0;
 }
 
-int exercicio_07() {
+void exercicio_07() {
 	//VOLUME DA ESFERA
 	const float pi = 3.14159;
 	float raio, volume;
@@ -147,11 +141,9 @@ int exercicio_07() {
 	
 	volume = (4.0/3.0) * pi * (raio * raio * raio);
     printf("Uma esfera de raio %.2f tem %.2f de volume.\n", raio, volume);
-    
-    return 0;
 }
 
-int exercicio_08()
+void exercicio_08()
 {
 	//CALCULAR A DISTANCIA ENTRE AS COORDENADAS, DISTANCIA EUCLIDIANA
 	float x1, y1, x2, y2, d;
@@ -176,8 +168,7 @@ int exercicio_08()
 	d = sqrt(pow((x2 - x1),2) + pow((y2 - y1),2));
 	
 	//escreva resposta final
-	printf("A distancia entre a coordenada p1( %.1f, %,1f) e p2( %.1f, %.1f) = %.2f", x1, y1, x2, y2);
-	
+	printf("A distancia entre a coordenada p1( %.1f, %.1f) e p2( %.1f, %.1f) = %.2f", x1, y1, x2, y2);
 }
 
 int main() {
@@ -203,40 +194,31 @@ int main() {
         //Direciona para o exercício correto
         switch(opcao) {
             case 1:
-                exercicio_01();
-                break;
+                exercicio_01();break;
                 
             case 2:
-                exercicio_02();
-                break;
+                exercicio_02(); break;
                 
 			case 3:
-                exercicio_03();
-                break;
+                exercicio_03();break;
                 
 			case 4:
-                exercicio_04();
-                break;
+                exercicio_04();break;
                 
 			case 5:
-                exercicio_05();
-                break;
+                exercicio_05();break;
                 
 			case 6:
-                exercicio_06();
-                break;	
+                exercicio_06();break;	
                 
             case 7:
-                exercicio_07();
-                break;  
+                exercicio_07();break;  
 				
 			case 8:
-                exercicio_08();
-                break;	  
+                exercicio_08();break;	  
 						                
             case 0:
-                printf("\nSaindo do programa...\n");
-                break;
+                printf("\nSaindo do programa...\n");break;
             default:
                 printf("\nOpcao invalida! Tente novamente.\n");
         }
