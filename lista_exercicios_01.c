@@ -168,7 +168,7 @@ void exercicio_08()
 	d = sqrt(pow((x2 - x1),2) + pow((y2 - y1),2));
 	
 	//escreva resposta final
-	printf("A distancia entre a coordenada p1( %.1f, %.1f) e p2( %.1f, %.1f) = %.2f", x1, y1, x2, y2);
+	printf("A distancia entre a coordenada p1( %.1f, %.1f) e p2( %.1f, %.1f) = %.2f", x1, y1, x2, y2, d);
 }
 
 int main() {
