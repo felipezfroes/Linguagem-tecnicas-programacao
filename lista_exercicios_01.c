@@ -33,7 +33,6 @@ void exercicio_02() {
     // Evita erro de loop infinito se o valor for exatamente zero
     if (valor == 0) {
         printf("0.0 x 10^0\n");
-        return 0;
     }
     
     // Trata números maiores ou iguais a 10
@@ -53,21 +52,39 @@ void exercicio_02() {
 
 void exercicio_03()
 {
-	//CONVERSOR DE NUMERO DECIMAL PARA BINARIO
-	int n, numero_bits, n_binario;
+	//CONVERSOR DE NUMERO DECIMAL PARA BINARIO ATE 64
+	int n, resultado,bit_64, bit_32, bit_16, bit_8, bit_4, bit_2, bit_1;
 	
-	printf("escolha um valor: \n");
+	printf("Escolha um valor para a conversao: \n");
 	scanf("%d", &n);
-	
-	printf("escolha um valor de bits: \n");
-	scanf("%d", &numero_bits);
 	
 	if (n == 0)
 	{
 		printf("0");
 	}
 	
+	bit_1 = n%2;
+	resultado = n/2; 
 	
+	bit_2 = resultado%2;
+	resultado = resultado/2; 
+	
+	bit_4 = resultado%2;
+	resultado = resultado/2; 
+	
+	bit_8 = resultado%2;
+	resultado = resultado/2; 
+	
+	bit_16 = resultado%2;
+	resultado = resultado/2; 
+	
+	bit_32 = resultado%2;
+	resultado = resultado/2; 
+	
+	bit_64 = resultado%2;
+	resultado = resultado/2; 
+	
+	printf("O resultado de %d em binario: %d%d%d%d%d%d%d", n, bit_64, bit_32, bit_16, bit_8, bit_4, bit_2, bit_1);
 }
 
 void exercicio_04()
@@ -172,58 +189,45 @@ void exercicio_08()
 }
 
 int main() {
-    int opcao;
+	int opcao;
+	
+	do {
+		//Exibe o menu
+        printf(
+		    "\n==================================================\n"
+		    "           MENU DE EXERCICIOS - LISTA 02          \n"
+		    "==================================================\n"
+		    " 1. Calcular ano de nascimento\n"
+		    " 2. Notacao Cientifica\n"
+		    " 3. Conversor de Numero Decimal para Binario ate 64\n"
+		    " 4. Salario Fixo Mensal\n"
+		    " 5. Soma, Media e Produto\n"
+		    " 6. Receber um Numero de Dias em Relacao de dias da idade \n"
+		    " 7. Volume da Esfera\n"
+		    " 8. Calcular a distancia entre as coordenadas, distancia euclidiana \n"
+		    " 0. Sair do programa\n"
+		    "==================================================\n"
+		    " Escolha um exercicio para ver: "
+		);
 
-    do {
-        //Exibe o menu
-        printf("\n===== MENU DE EXERCICIOS =====\n");
-        printf("1 - Executar Exercicio 1\n");
-        printf("2 - Executar Exercicio 2\n");
-        printf("3 - Executar Exercicio 3\n");
-        printf("4 - Executar Exercicio 4\n");
-        printf("5 - Executar Exercicio 5\n");
-        printf("6 - Executar Exercicio 6\n");
-        printf("7 - Executar Exercicio 7\n");
-        printf("8 - Executar Exercicio 8\n");
-        printf("0 - Sair\n");
-        printf("===== ESCOLHA UM OPCAO =====\n");
-        
-        //Le a opcao escolhida
-        scanf("%d", &opcao);
-
-        //Direciona para o exercício correto
-        switch(opcao) {
-            case 1:
-                exercicio_01();break;
-                
-            case 2:
-                exercicio_02(); break;
-                
-			case 3:
-                exercicio_03();break;
-                
-			case 4:
-                exercicio_04();break;
-                
-			case 5:
-                exercicio_05();break;
-                
-			case 6:
-                exercicio_06();break;	
-                
-            case 7:
-                exercicio_07();break;  
-				
-			case 8:
-                exercicio_08();break;	  
-						                
-            case 0:
-                printf("\nSaindo do programa...\n");break;
-            default:
-                printf("\nOpcao invalida! Tente novamente.\n");
-        }
-
-    } while(opcao != 0); //Continua até a opção ser 0
-
-    return 0;
+		
+		scanf("%d", &opcao);
+		
+		switch(opcao)
+		{
+			case 1: 	exercicio_01(); break;
+			case 2: 	exercicio_02(); break;
+			case 3: 	exercicio_03(); break;
+			case 4: 	exercicio_04(); break;
+			case 5: 	exercicio_05(); break;
+			case 6: 	exercicio_06(); break;
+			case 7: 	exercicio_07(); break;
+			case 8: 	exercicio_08(); break;
+			case 0:		printf("\nSaindo do programa...\n");break;
+			default: 	printf("\nOpcao invalida! Tente novamente.\n");
+		} 
+	} while(opcao != 0); //Continua até a opção ser 0	
+	
+	
+	return 0;
 }
