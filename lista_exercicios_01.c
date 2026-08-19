@@ -195,7 +195,7 @@ int main() {
 		//Exibe o menu
         printf(
 		    "\n==================================================\n"
-		    "           MENU DE EXERCICIOS - LISTA 02          \n"
+		    "           MENU DE EXERCICIOS - LISTA 01          \n"
 		    "==================================================\n"
 		    " 1. Calcular ano de nascimento\n"
 		    " 2. Notacao Cientifica\n"
