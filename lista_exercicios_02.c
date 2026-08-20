@@ -3,6 +3,28 @@
 
 //LISTA 02 DE LINGUAGEM TECNICA DE PROGRAMACAO
 
+void mostra_menu()
+{
+	printf(
+		    "\n==================================================\n"
+		    "           MENU DE EXERCICIOS - LISTA 02          \n"
+		    "==================================================\n"
+		    " 1. Calcular ano de nascimento\n"
+		    " 2. Converter Km/h para M/s\n"
+		    " 3. Converter Real para Dolar\n"
+		    " 4. Converter Celsius para Fahrenheit\n"
+		    " 5. Converter Angulo para Radiano\n"
+		    " 6. Mostrar antecessor e sucessor\n"
+		    " 7. Calcular quantia por ganhador\n"
+		    " 8. Converter segundos para Horas:Min:Seg\n"
+		    " 9. Calcular distancia e combustivel gasto\n"
+		    "10. Avaliar o maior entre 4 valores\n"
+		    " 0. Sair do programa\n"
+		    "==================================================\n"
+		    " Escolha um exercicio para ver: "
+		);
+}
+
 void exercicio_01()
 {
 	//CALCULAR O ANO DE NASCIMENTO PELA IDADE E ANO ATUAL
@@ -27,7 +49,7 @@ void exercicio_02()
 	scanf("%f", &kmh);
 	
 	ms = kmh / 3.6;
-	printf("A velocidade %.2fkm/h corresponde a %.2fm/s\n", kmh, kmh);
+	printf("A velocidade %.2fkm/h corresponde a %.2fm/s\n", kmh, ms);
 }
 
 void exercicio_03()
@@ -141,8 +163,8 @@ void exercicio_09()
 
 void exercicio_10()
 {
-	//3 VALORES E AVALIAR QUAL O MAIOR
-	int a, b, c, maiorAB, maiorFinal;
+	//4 VALORES E AVALIAR QUAL O MAIOR
+	int a, b, c, d, maiorAB, maiorCD, maiorFinal;
 	
 	printf("Informe o primeiro valor: \n");
 	scanf("%d", &a);
@@ -153,36 +175,23 @@ void exercicio_10()
 	printf("Informe o terceiro valor: \n");
 	scanf("%d", &c);
 	
+	printf("Informe o quarto valor: \n");
+	scanf("%d", &d);
+	
 	maiorAB = (a + b + abs(a-b)) /2;
-	maiorFinal = (maiorAB + c + abs(maiorAB - c)) / 2;
+	maiorCD = (c + d + abs(c-d)) /2;
+	maiorFinal = (maiorAB + maiorCD + abs(maiorAB - maiorCD)) / 2;
 	
 	printf("%d eh o maior!\n", maiorFinal);
 }
 
 int main() {
+	
 	int opcao;
 	
 	do {
 		//Exibe o menu
-        printf(
-		    "\n==================================================\n"
-		    "           MENU DE EXERCICIOS - LISTA 02          \n"
-		    "==================================================\n"
-		    " 1. Calcular ano de nascimento\n"
-		    " 2. Converter Km/h para M/s\n"
-		    " 3. Converter Real para Dolar\n"
-		    " 4. Converter Celsius para Fahrenheit\n"
-		    " 5. Converter Angulo para Radiano\n"
-		    " 6. Mostrar antecessor e sucessor\n"
-		    " 7. Calcular quantia por ganhador\n"
-		    " 8. Converter segundos para Horas:Min:Seg\n"
-		    " 9. Calcular distancia e combustivel gasto\n"
-		    "10. Avaliar o maior entre 3 valores\n"
-		    " 0. Sair do programa\n"
-		    "==================================================\n"
-		    " Escolha um exercicio para ver: "
-		);
-
+		mostra_menu();
 		
 		scanf("%d", &opcao);
 		
