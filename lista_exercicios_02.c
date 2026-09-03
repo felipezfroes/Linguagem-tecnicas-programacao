@@ -19,7 +19,7 @@ void mostra_menu()
 		    " 8. Converter segundos para Horas:Min:Seg\n"
 		    " 9. Calcular distancia e combustivel gasto\n"
 		    "10. Avaliar o maior entre 4 valores\n"
-		    " 0. Sair do programa\n"
+		    " 0. Sair do programa \n"
 		    "==================================================\n"
 		    " Escolha um exercicio para ver: "
 		);
